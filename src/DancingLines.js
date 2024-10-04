@@ -22,7 +22,7 @@ const DancingLines = () => {
 
     const getRandomSpeed = () => Math.random() * 9 + 1;
 
-    const lines = Array(5).fill().map(() => ({
+    const lines = Array(0).fill().map(() => ({
       start: {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -39,7 +39,7 @@ const DancingLines = () => {
     }));
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.0001)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
       lines.forEach(line => {
